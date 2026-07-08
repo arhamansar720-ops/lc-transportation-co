@@ -3,605 +3,168 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LC Transportation Co. | TLC Black Car Service | Long Island City, NY</title>
+<title>LC Transportation Co. :: TLC Black Car Service :: Long Island City, NY</title>
 <meta name="description" content="LC Transportation Co. - Licensed TLC for-hire black car service in Long Island City, NY. Brand new 2026 fleet: Camry, RAV4, Highlander, Sienna.">
-<style>
-  :root{
-    --black:#101010;
-    --black2:#1c1c1c;
-    --chrome1:#f4f4f4;
-    --chrome2:#c9c9c9;
-    --red1:#ff4b3e;
-    --red2:#a10f0a;
-    --gold1:#ffe27a;
-    --gold2:#c99a1e;
-    --panel:#232323;
-  }
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
-    font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;
-    background:#e9e9e9 repeating-linear-gradient(45deg,#eeeeee 0px,#eeeeee 12px,#e4e4e4 12px,#e4e4e4 24px);
-    color:#222;
-    -webkit-font-smoothing:antialiased;
-  }
-  a{text-decoration:none;color:inherit;}
-  img,svg{display:block;}
-
-  /* ---------- GLOSSY BUTTON CORE (2013 style) ---------- */
-  .glossy-btn{
-    position:relative;
-    display:inline-block;
-    padding:14px 34px;
-    border-radius:8px;
-    font-weight:bold;
-    font-size:16px;
-    letter-spacing:.5px;
-    text-align:center;
-    cursor:pointer;
-    border:1px solid rgba(0,0,0,.35);
-    text-shadow:0 1px 0 rgba(0,0,0,.35);
-    box-shadow:
-      inset 0 1px 0 rgba(255,255,255,.6),
-      0 1px 0 rgba(255,255,255,.6),
-      0 3px 6px rgba(0,0,0,.35);
-    transition:transform .06s ease, box-shadow .06s ease;
-    user-select:none;
-  }
-  .glossy-btn::after{
-    content:"";
-    position:absolute;
-    top:1px;left:1px;right:1px;
-    height:48%;
-    border-radius:7px 7px 60px 60px/7px 7px 30px 30px;
-    background:linear-gradient(to bottom, rgba(255,255,255,.75), rgba(255,255,255,0));
-    pointer-events:none;
-  }
-  .glossy-btn:active{
-    transform:translateY(2px);
-    box-shadow:
-      inset 0 2px 4px rgba(0,0,0,.4),
-      0 1px 0 rgba(255,255,255,.3);
-  }
-  .btn-red{ color:#fff; background:linear-gradient(to bottom,#ff6a5e 0%,#ff4b3e 45%,#c31c11 55%,#a10f0a 100%);}
-  .btn-black{ color:#fff; background:linear-gradient(to bottom,#4a4a4a 0%,#232323 45%,#0d0d0d 55%,#000 100%);}
-  .btn-gold{ color:#3a2a00; text-shadow:0 1px 0 rgba(255,255,255,.4); background:linear-gradient(to bottom,#fff2b0 0%,#ffe27a 45%,#e0ab1f 55%,#c99a1e 100%);}
-  .btn-small{padding:9px 18px;font-size:13px;border-radius:6px;}
-  .btn-block{display:block;width:100%;}
-
-  /* ---------- HEADER ---------- */
-  header{
-    background:linear-gradient(to bottom,#2c2c2c 0%,#151515 100%);
-    border-bottom:3px solid #000;
-    box-shadow:0 3px 8px rgba(0,0,0,.4);
-    position:sticky;top:0;z-index:500;
-  }
-  .header-inner{
-    max-width:1180px;margin:0 auto;padding:14px 20px;
-    display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;
-  }
-  .logo{
-    display:flex;align-items:center;gap:12px;
-  }
-  .logo-badge{
-    width:52px;height:52px;border-radius:50%;
-    background:radial-gradient(circle at 35% 30%, #616161, #1a1a1a 70%);
-    border:2px solid #000;
-    box-shadow:inset 0 2px 3px rgba(255,255,255,.4), 0 2px 4px rgba(0,0,0,.5);
-    display:flex;align-items:center;justify-content:center;
-    color:var(--gold1);font-weight:bold;font-size:20px;text-shadow:0 1px 1px #000;
-  }
-  .logo-text h1{
-    margin:0;color:#fff;font-size:22px;letter-spacing:1px;
-    text-shadow:0 2px 2px rgba(0,0,0,.6);
-  }
-  .logo-text span{
-    display:block;color:var(--gold1);font-size:11px;letter-spacing:2px;text-transform:uppercase;
-  }
-  nav{display:flex;gap:4px;flex-wrap:wrap;}
-  nav a{
-    color:#eee;padding:10px 14px;border-radius:5px;font-size:13px;font-weight:bold;
-    letter-spacing:.5px;text-transform:uppercase;
-    border-bottom:2px solid transparent;
-  }
-  nav a:hover{background:rgba(255,255,255,.08);border-bottom:2px solid var(--red1);}
-
-  /* ---------- HERO ---------- */
-  .hero{
-    background:
-      radial-gradient(circle at 50% -10%, #3a3a3a 0%, #000 65%);
-    color:#fff;padding:70px 20px 90px;text-align:center;position:relative;overflow:hidden;
-    border-bottom:4px solid var(--red2);
-  }
-  .ribbon{
-    display:inline-block;margin-bottom:18px;padding:6px 22px;border-radius:20px;
-    background:linear-gradient(to bottom,#fff2b0,#ffe27a 45%,#c99a1e);
-    color:#3a2a00;font-size:12px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.8), 0 2px 5px rgba(0,0,0,.4);
-  }
-  .hero h2{
-    font-size:44px;margin:10px 0 6px;text-shadow:0 3px 4px rgba(0,0,0,.6);
-    letter-spacing:.5px;
-  }
-  .hero p.sub{
-    font-size:17px;color:#cfcfcf;max-width:620px;margin:0 auto 30px;line-height:1.6;
-  }
-  .hero-ctas{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;}
-
-  .trust-strip{
-    background:linear-gradient(to bottom,#dedede,#bcbcbc);
-    border-top:1px solid #fff;border-bottom:1px solid #888;
-    box-shadow:inset 0 1px 0 #fff, 0 2px 6px rgba(0,0,0,.25);
-  }
-  .trust-inner{
-    max-width:1180px;margin:0 auto;padding:16px 20px;
-    display:flex;justify-content:space-around;flex-wrap:wrap;gap:14px;text-align:center;
-  }
-  .trust-item{font-size:13px;font-weight:bold;color:#333;text-transform:uppercase;letter-spacing:.5px;}
-  .trust-item span{display:block;font-size:20px;margin-bottom:2px;}
-
-  /* ---------- SECTIONS ---------- */
-  section{max-width:1180px;margin:0 auto;padding:60px 20px;}
-  .section-title{text-align:center;margin-bottom:8px;font-size:30px;color:#161616;text-shadow:0 1px 0 #fff;}
-  .section-sub{text-align:center;color:#666;margin-bottom:40px;font-size:15px;}
-
-  /* ---------- FLEET / INTERACTIVE MENU ---------- */
-  .fleet-panel{
-    background:linear-gradient(to bottom,#2b2b2b,#101010);
-    border-radius:14px;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.15), 0 8px 24px rgba(0,0,0,.35);
-    padding:26px;
-  }
-  .fleet-tabs{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:26px;}
-  .fleet-tab{
-    padding:10px 20px;border-radius:20px;font-size:13px;font-weight:bold;letter-spacing:.5px;
-    color:#ddd;background:linear-gradient(to bottom,#3a3a3a,#161616);
-    border:1px solid #000;cursor:pointer;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.2), 0 2px 4px rgba(0,0,0,.4);
-  }
-  .fleet-tab.active{
-    color:#3a2a00;
-    background:linear-gradient(to bottom,#fff2b0,#ffe27a 45%,#c99a1e);
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.8), 0 2px 8px rgba(0,0,0,.5);
-  }
-  .fleet-display{
-    display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;
-  }
-  @media(max-width:720px){.fleet-display{grid-template-columns:1fr;}}
-  .car-stage{
-    background:radial-gradient(ellipse at center, #333 0%, #0a0a0a 75%);
-    border-radius:12px;padding:30px;
-    box-shadow:inset 0 0 30px rgba(0,0,0,.8);
-    display:flex;align-items:center;justify-content:center;min-height:220px;
-  }
-  .car-stage svg{width:100%;max-width:340px;filter:drop-shadow(0 10px 12px rgba(0,0,0,.6));}
-  .fleet-info h3{color:#fff;font-size:26px;margin:0 0 4px;}
-  .fleet-info .tag{color:var(--gold1);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;display:block;}
-  .fleet-info p.desc{color:#ccc;line-height:1.6;font-size:14px;margin-bottom:18px;}
-  .spec-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px;}
-  .spec-box{
-    background:#1a1a1a;border:1px solid #333;border-radius:8px;padding:10px 12px;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.05);
-  }
-  .spec-box b{display:block;color:var(--gold1);font-size:18px;}
-  .spec-box span{color:#999;font-size:11px;text-transform:uppercase;letter-spacing:.5px;}
-
-  /* ---------- FARE ESTIMATOR ---------- */
-  .estimator{
-    background:linear-gradient(to bottom,#f8f8f8,#dcdcdc);
-    border-radius:14px;border:1px solid #bbb;
-    box-shadow:inset 0 1px 0 #fff, 0 6px 18px rgba(0,0,0,.2);
-    padding:34px;display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center;
-  }
-  @media(max-width:720px){.estimator{grid-template-columns:1fr;}}
-  .estimator h3{margin-top:0;font-size:24px;}
-  .field{margin-bottom:16px;}
-  .field label{display:block;font-size:12px;font-weight:bold;text-transform:uppercase;letter-spacing:.5px;color:#555;margin-bottom:6px;}
-  .field select,.field input{
-    width:100%;padding:11px 12px;border-radius:6px;border:1px solid #999;
-    background:linear-gradient(to bottom,#fff,#f0f0f0);
-    box-shadow:inset 0 1px 3px rgba(0,0,0,.15);
-    font-size:14px;
-  }
-  .estimate-result{
-    background:linear-gradient(to bottom,#232323,#000);
-    border-radius:12px;padding:26px;text-align:center;color:#fff;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.15), 0 4px 10px rgba(0,0,0,.4);
-  }
-  .estimate-result .amt{font-size:42px;color:var(--gold1);font-weight:bold;text-shadow:0 2px 3px rgba(0,0,0,.6);}
-  .estimate-result .note{font-size:11px;color:#999;margin-top:8px;}
-
-  /* ---------- SERVICE AREA ---------- */
-  .area-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;}
-  .area-chip{
-    background:linear-gradient(to bottom,#fff,#e6e6e6);
-    border:1px solid #ccc;border-radius:10px;padding:16px;text-align:center;
-    box-shadow:inset 0 1px 0 #fff, 0 3px 6px rgba(0,0,0,.15);
-    font-weight:bold;color:#222;font-size:14px;
-  }
-  .area-chip span{display:block;font-size:22px;margin-bottom:6px;}
-
-  /* ---------- TESTIMONIALS ---------- */
-  .testi-wrap{position:relative;max-width:700px;margin:0 auto;text-align:center;}
-  .testi-card{
-    background:linear-gradient(to bottom,#fff,#eee);
-    border-radius:14px;padding:34px;
-    box-shadow:inset 0 1px 0 #fff, 0 6px 16px rgba(0,0,0,.2);
-    border:1px solid #ccc;
-    display:none;
-  }
-  .testi-card.active{display:block;}
-  .testi-card p{font-size:17px;font-style:italic;color:#333;line-height:1.6;}
-  .testi-stars{color:var(--gold2);font-size:18px;margin-bottom:10px;}
-  .testi-name{margin-top:14px;font-weight:bold;color:#111;}
-  .testi-dots{display:flex;justify-content:center;gap:8px;margin-top:18px;}
-  .dot{width:10px;height:10px;border-radius:50%;background:#bbb;cursor:pointer;box-shadow:inset 0 1px 2px rgba(0,0,0,.3);}
-  .dot.active{background:linear-gradient(to bottom,#ff6a5e,#a10f0a);}
-
-  /* ---------- CONTACT ---------- */
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
-  @media(max-width:720px){.contact-grid{grid-template-columns:1fr;}}
-  .contact-card{
-    background:linear-gradient(to bottom,#232323,#000);color:#fff;border-radius:14px;padding:30px;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.15), 0 6px 16px rgba(0,0,0,.3);
-  }
-  .contact-card h3{color:var(--gold1);margin-top:0;}
-  .contact-row{display:flex;gap:12px;margin-bottom:16px;align-items:flex-start;}
-  .contact-row .ic{
-    width:34px;height:34px;border-radius:50%;background:linear-gradient(to bottom,#4a4a4a,#0d0d0d);
-    display:flex;align-items:center;justify-content:center;flex-shrink:0;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.3);
-  }
-  .contact-row div p{margin:0;font-size:14px;color:#ccc;}
-  .contact-row div b{color:#fff;}
-  .form-card{
-    background:linear-gradient(to bottom,#f8f8f8,#e2e2e2);border-radius:14px;padding:30px;
-    border:1px solid #ccc;box-shadow:inset 0 1px 0 #fff, 0 6px 16px rgba(0,0,0,.15);
-  }
-  .form-card input,.form-card textarea{
-    width:100%;padding:11px 12px;border-radius:6px;border:1px solid #999;margin-bottom:14px;
-    background:linear-gradient(to bottom,#fff,#f0f0f0);box-shadow:inset 0 1px 3px rgba(0,0,0,.15);font-size:14px;
-    font-family:inherit;
-  }
-
-  /* ---------- FOOTER ---------- */
-  footer{
-    background:linear-gradient(to bottom,#151515,#000);color:#999;padding:34px 20px;text-align:center;
-    border-top:3px solid var(--red2);font-size:12px;
-  }
-  footer .foot-logo{color:#fff;font-weight:bold;font-size:16px;margin-bottom:6px;letter-spacing:1px;}
-  footer .license{color:var(--gold1);margin:6px 0;}
-
-  /* ---------- STICKY CALL BUTTON ---------- */
-  .sticky-call{
-    position:fixed;bottom:22px;right:22px;z-index:600;
-    width:66px;height:66px;border-radius:50%;
-    background:radial-gradient(circle at 35% 30%, #ff8a7e, #a10f0a 75%);
-    border:2px solid #6d0a06;
-    box-shadow:inset 0 2px 3px rgba(255,255,255,.5), 0 4px 10px rgba(0,0,0,.5);
-    display:flex;align-items:center;justify-content:center;color:#fff;
-    animation:pulse 2.4s infinite;
-  }
-  .sticky-call svg{width:28px;height:28px;}
-  @keyframes pulse{
-    0%{box-shadow:inset 0 2px 3px rgba(255,255,255,.5), 0 4px 10px rgba(0,0,0,.5), 0 0 0 0 rgba(255,75,62,.5);}
-    70%{box-shadow:inset 0 2px 3px rgba(255,255,255,.5), 0 4px 10px rgba(0,0,0,.5), 0 0 0 16px rgba(255,75,62,0);}
-    100%{box-shadow:inset 0 2px 3px rgba(255,255,255,.5), 0 4px 10px rgba(0,0,0,.5), 0 0 0 0 rgba(255,75,62,0);}
-  }
-</style>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
 
-<header>
-  <div class="header-inner">
-    <div class="logo">
-      <div class="logo-badge">LC</div>
-      <div class="logo-text">
-        <h1>LC TRANSPORTATION CO.</h1>
-        <span>TLC For-Hire &bull; Long Island City, NY</span>
-      </div>
+<div id="pageframe">
+
+  <div id="utilitybar">
+    Welcome to LC Transportation Co.! &nbsp;|&nbsp;
+    <a href="#">Bookmark Us</a>|<a href="#">Tell a Friend</a>|<a href="contact.html">E-Mail Dispatch</a>
+    <span class="ub-right" id="todayDate"></span>
+  </div>
+
+  <div class="tickerbar">
+    <marquee behavior="scroll" direction="left" scrollamount="4">
+      &#9733; NOW BOOKING &mdash; BRAND NEW 2026 FLEET &#9733; &nbsp;&nbsp;&nbsp; CALL (718) 555-0142 FOR INSTANT RESERVATIONS &nbsp;&nbsp;&nbsp; &#9733; TLC LICENSED &amp; FULLY INSURED &#9733; &nbsp;&nbsp;&nbsp; ASK ABOUT OUR CORPORATE ACCOUNT RATES! &nbsp;&nbsp;&nbsp;
+    </marquee>
+  </div>
+
+  <div id="banner">
+    <div class="brand">
+      <table class="brand-table"><tr>
+        <td><div class="logo-plate">LC</div></td>
+        <td class="brand-text">
+          <h1>LC TRANSPORTATION CO.</h1>
+          <span class="tag">TLC For-Hire Base &middot; Long Island City, NY</span>
+        </td>
+      </tr></table>
     </div>
-    <nav>
-      <a href="#fleet">Fleet</a>
-      <a href="#estimate">Fare Estimate</a>
-      <a href="#areas">Service Area</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a href="tel:+17185550142" class="glossy-btn btn-red btn-small">Call (718) 555-0142</a>
-  </div>
-</header>
-
-<div class="hero">
-  <div class="ribbon">Now Booking &mdash; Brand New 2026 Fleet</div>
-  <h2>Black-on-Black Car Service,<br>Done Right.</h2>
-  <p class="sub">LC Transportation Co. is a fully TLC-licensed for-hire base in Long Island City, running an all-new 2026 fleet. Airport runs, corporate accounts, and point-to-point &mdash; clean cars, on time, every time.</p>
-  <div class="hero-ctas">
-    <a href="#estimate" class="glossy-btn btn-gold">Get a Fare Estimate</a>
-    <a href="tel:+17185550142" class="glossy-btn btn-red">Book Now &raquo;</a>
-  </div>
-</div>
-
-<div class="trust-strip">
-  <div class="trust-inner">
-    <div class="trust-item"><span>&#9989;</span>TLC Licensed &amp; Insured</div>
-    <div class="trust-item"><span>&#128664;</span>All-New 2026 Fleet</div>
-    <div class="trust-item"><span>&#9200;</span>24/7 Dispatch</div>
-    <div class="trust-item"><span>&#9992;</span>JFK &bull; LGA &bull; EWR Specialists</div>
-  </div>
-</div>
-
-<section id="fleet">
-  <h2 class="section-title">Our Fleet</h2>
-  <p class="section-sub">Click a vehicle below &mdash; every car is black-on-black, 2026 model year.</p>
-
-  <div class="fleet-panel">
-    <div class="fleet-tabs" id="fleetTabs">
-      <div class="fleet-tab active" data-car="camry">Camry</div>
-      <div class="fleet-tab" data-car="rav4">RAV4</div>
-      <div class="fleet-tab" data-car="highlander">Highlander</div>
-      <div class="fleet-tab" data-car="sienna">Sienna</div>
+    <div class="banner-badge">
+      <a href="tel:+17185550142" class="glossy-btn btn-red btn-small">&#9742; Call (718) 555-0142</a>
     </div>
+  </div>
 
-    <div class="fleet-display">
-      <div class="car-stage" id="carStage"></div>
-      <div class="fleet-info">
-        <span class="tag" id="carTag">Executive Sedan</span>
-        <h3 id="carName">2026 Toyota Camry</h3>
-        <p class="desc" id="carDesc">Our standard for-hire sedan &mdash; quiet, comfortable, and immaculately maintained. Ideal for solo travelers, business trips, and short hops around LIC and Manhattan.</p>
-        <div class="spec-grid">
-          <div class="spec-box"><b id="carPax">4</b><span>Passengers</span></div>
-          <div class="spec-box"><b id="carBags">3</b><span>Bags</span></div>
-          <div class="spec-box"><b id="carBase">$45</b><span>Base Fare</span></div>
-          <div class="spec-box"><b id="carBest">City &amp; Airport</b><span>Best For</span></div>
+  <div id="navbar">
+    <ul>
+      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="fleet.html">Our Fleet</a></li>
+      <li><a href="estimate.html">Fare Estimate</a></li>
+      <li><a href="areas.html">Service Area</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <div class="hero">
+    <div class="ribbon">Now Booking &mdash; Brand New 2026 Fleet</div>
+    <h2>Black-on-Black Car Service,<br>Done Right.</h2>
+    <p class="sub">LC Transportation Co. is a fully TLC-licensed for-hire base in Long Island City, running an all-new 2026 fleet. Airport runs, corporate accounts, and point-to-point &mdash; clean cars, on time, every time.</p>
+    <div class="hero-ctas">
+      <a href="estimate.html" class="glossy-btn btn-gold">Get a Fare Estimate</a>
+      <a href="tel:+17185550142" class="glossy-btn btn-red">Book Now &raquo;</a>
+    </div>
+  </div>
+
+  <table class="trust">
+    <tr>
+      <td><span>&#9989;</span>TLC Licensed &amp; Insured</td>
+      <td><span>&#128664;</span>All-New 2026 Fleet</td>
+      <td><span>&#9200;</span>24/7 Dispatch</td>
+      <td><span>&#9992;</span>JFK &bull; LGA &bull; EWR</td>
+    </tr>
+  </table>
+
+  <div id="bodywrap">
+
+    <div id="sidebar">
+      <div class="sbbox">
+        <div class="sbhead">TLC Licensed Base</div>
+        <div class="sbbody">
+          <div class="badge-starburst">100%<br>LICENSED</div>
         </div>
-        <a href="tel:+17185550142" class="glossy-btn btn-gold">Reserve This Vehicle</a>
       </div>
+
+      <div class="sbbox">
+        <div class="sbhead">Quick Links</div>
+        <div class="sbbody">
+          <ul>
+            <li><a href="fleet.html">View Our Fleet &raquo;</a></li>
+            <li><a href="estimate.html">Instant Fare Quote &raquo;</a></li>
+            <li><a href="areas.html">Where We Drive &raquo;</a></li>
+            <li><a href="reviews.html">Rider Reviews &raquo;</a></li>
+            <li><a href="contact.html">Book a Reservation &raquo;</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sbbox">
+        <div class="sbhead">Site Stats</div>
+        <div class="sbbody">
+          <div class="hitcounter">0000000</div>
+          <div class="hitcounter-label">Visitors Since 2013</div>
+        </div>
+      </div>
+
+      <div class="best-viewed">
+        This site is best viewed at 1024x768 resolution.<br>Internet Explorer 6.0+ / Netscape recommended.
+      </div>
+    </div>
+
+    <div id="maincol">
+
+      <div class="panel">
+        <div class="panel-head">&#128666; Our Fleet at a Glance</div>
+        <div class="panel-body">
+          <p style="font-size:12px;line-height:1.7;">Every LC Transportation vehicle is black-on-black, 2026 model year, and detailed before every shift. Choose from four vehicle classes depending on your party size and luggage needs.</p>
+          <table class="specs">
+            <tr>
+              <td><b>Camry</b><span>Sedan &middot; 4 Pax</span></td>
+              <td><b>RAV4</b><span>Compact SUV &middot; 4 Pax</span></td>
+              <td><b>Highlander</b><span>Full SUV &middot; 6 Pax</span></td>
+              <td><b>Sienna</b><span>Minivan &middot; 7 Pax</span></td>
+            </tr>
+          </table>
+          <p style="text-align:center;margin-top:14px;"><a href="fleet.html" class="glossy-btn btn-gold">See Full Fleet Menu &raquo;</a></p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">&#9998; Why Riders Choose LC Transportation Co.</div>
+        <div class="panel-body">
+          <table class="specs">
+            <tr>
+              <td><b>24/7</b><span>Dispatch</span></td>
+              <td><b>100%</b><span>TLC Licensed</span></td>
+              <td><b>2026</b><span>Model Year Fleet</span></td>
+              <td><b>5&#9733;</b><span>Rider Rated</span></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">&#128231; Get In Touch <span class="blink" style="color:#ff4b3e;">&#9679; NEW</span></div>
+        <div class="panel-body">
+          <p style="font-size:12px;">Ready to book? Call dispatch anytime or send us a reservation request online.</p>
+          <p><a href="tel:+17185550142" class="glossy-btn btn-red">Call Dispatch Now</a>
+          &nbsp; <a href="contact.html" class="glossy-btn btn-black">Reservation Form &raquo;</a></p>
+        </div>
+      </div>
+
     </div>
   </div>
-</section>
 
-<section id="estimate">
-  <h2 class="section-title">Instant Fare Estimate</h2>
-  <p class="section-sub">Rough pricing to help you plan &mdash; final fare confirmed at booking.</p>
-  <div class="estimator">
-    <div>
-      <div class="field">
-        <label>Vehicle</label>
-        <select id="estCar">
-          <option value="45">Camry &mdash; Sedan</option>
-          <option value="55">RAV4 &mdash; Compact SUV</option>
-          <option value="65">Highlander &mdash; Full-Size SUV</option>
-          <option value="75">Sienna &mdash; Minivan</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Trip Type</label>
-        <select id="estTrip">
-          <option value="1">Point to Point (LIC / Queens / Manhattan)</option>
-          <option value="1.4">Outer Borough</option>
-          <option value="1.8">Airport Transfer (JFK / LGA / EWR)</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>Estimated Miles</label>
-        <input type="number" id="estMiles" value="8" min="1" max="60">
-      </div>
-      <a class="glossy-btn btn-red btn-block" id="calcBtn">Calculate Estimate</a>
+  <div id="pagefooter">
+    <div class="fl">LC TRANSPORTATION CO.</div>
+    <div>TLC Licensed For-Hire Base &bull; Long Island City, NY 11101</div>
+    <div class="badges">
+      <span>TLC LICENSED</span><span>FULLY INSURED</span><span>SECURE SITE</span><span>EST. 2013</span>
     </div>
-    <div class="estimate-result">
-      <div class="note">ESTIMATED FARE</div>
-      <div class="amt" id="estAmt">$45</div>
-      <div class="note">Includes base rate + mileage. Tolls, tips &amp; wait time not included.</div>
-    </div>
+    <div class="hitcounter" style="max-width:160px;margin:8px auto;">0000000</div>
+    <div>&copy; 2026 LC Transportation Co. All rights reserved.<br>
+    Site designed &amp; maintained by the LC Transportation Co. webmaster. Best viewed 1024x768.</div>
   </div>
-</section>
 
-<section id="areas">
-  <h2 class="section-title">Where We Drive</h2>
-  <p class="section-sub">Long Island City based, all five boroughs covered.</p>
-  <div class="area-grid">
-    <div class="area-chip"><span>&#127961;</span>Long Island City</div>
-    <div class="area-chip"><span>&#127943;</span>Manhattan</div>
-    <div class="area-chip"><span>&#127968;</span>Queens</div>
-    <div class="area-chip"><span>&#127945;</span>Brooklyn</div>
-    <div class="area-chip"><span>&#9992;</span>JFK Airport</div>
-    <div class="area-chip"><span>&#9992;</span>LaGuardia (LGA)</div>
-    <div class="area-chip"><span>&#9992;</span>Newark (EWR)</div>
-    <div class="area-chip"><span>&#128663;</span>Nassau &amp; Westchester (on request)</div>
-  </div>
-</section>
-
-<section id="reviews">
-  <h2 class="section-title">What Riders Say</h2>
-  <div class="testi-wrap">
-    <div class="testi-card active">
-      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p>"Spotless black Highlander, driver was early, and the dispatch text updates were a nice touch. This is my go-to for LGA runs now."</p>
-      <div class="testi-name">&mdash; Daniela R., Long Island City</div>
-    </div>
-    <div class="testi-card">
-      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p>"Booked the Sienna for a family airport pickup &mdash; fit all our luggage with room to spare. Smooth, professional, on time."</p>
-      <div class="testi-name">&mdash; Marcus T., Astoria</div>
-    </div>
-    <div class="testi-card">
-      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-      <p>"Use them for client pickups from our office in LIC. Brand new Camrys, always black-on-black, always professional."</p>
-      <div class="testi-name">&mdash; Priya S., Court Square</div>
-    </div>
-    <div class="testi-dots">
-      <div class="dot active" data-i="0"></div>
-      <div class="dot" data-i="1"></div>
-      <div class="dot" data-i="2"></div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <h2 class="section-title">Book Your Ride</h2>
-  <div class="contact-grid">
-    <div class="contact-card">
-      <h3>LC Transportation Co.</h3>
-      <div class="contact-row">
-        <div class="ic">&#128205;</div>
-        <div><b>Address</b><p>Long Island City, NY 11101<br>(Queens, New York)</p></div>
-      </div>
-      <div class="contact-row">
-        <div class="ic">&#128222;</div>
-        <div><b>Dispatch</b><p>(718) 555-0142 &mdash; 24/7</p></div>
-      </div>
-      <div class="contact-row">
-        <div class="ic">&#9993;</div>
-        <div><b>Email</b><p>book@lctransportationco.com</p></div>
-      </div>
-      <div class="contact-row">
-        <div class="ic">&#128179;</div>
-        <div><b>TLC Base License</b><p>#B01234 (sample &mdash; update with real license #)</p></div>
-      </div>
-      <a href="tel:+17185550142" class="glossy-btn btn-gold btn-block" style="margin-top:10px;">Call Dispatch Now</a>
-    </div>
-    <div class="form-card">
-      <h3 style="margin-top:0;">Request a Reservation</h3>
-      <form onsubmit="return sendMail(event)">
-        <input type="text" placeholder="Full Name" required>
-        <input type="tel" placeholder="Phone Number" required>
-        <input type="text" placeholder="Pickup Location">
-        <input type="text" placeholder="Drop-off Location">
-        <textarea rows="3" placeholder="Date, time, vehicle preference..."></textarea>
-        <a href="mailto:book@lctransportationco.com" class="glossy-btn btn-red btn-block">Send Request</a>
-      </form>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="foot-logo">LC TRANSPORTATION CO.</div>
-  <div class="license">TLC Licensed For-Hire Base &bull; Long Island City, NY 11101</div>
-  <div>&copy; 2026 LC Transportation Co. All rights reserved. All vehicles black-on-black, 2026 model year.</div>
-</footer>
+</div>
 
 <a href="tel:+17185550142" class="sticky-call" title="Call Now">
   <svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.6 21 3 12.4 3 2c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1L6.6 10.8z" fill="#fff"/></svg>
 </a>
 
-<script>
-  // ---------- FLEET DATA ----------
-  const fleet = {
-    camry: {
-      tag: "Executive Sedan", name: "2026 Toyota Camry",
-      desc: "Our standard for-hire sedan — quiet, comfortable, and immaculately maintained. Ideal for solo travelers, business trips, and short hops around LIC and Manhattan.",
-      pax: "4", bags: "3", base: "$45", best: "City & Airport",
-      svg: `<svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg">
-        <defs><linearGradient id="body1" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#5a5a5a"/><stop offset="45%" stop-color="#1c1c1c"/><stop offset="100%" stop-color="#000"/>
-        </linearGradient></defs>
-        <ellipse cx="150" cy="115" rx="130" ry="8" fill="#000" opacity=".35"/>
-        <path d="M20,95 Q25,55 70,50 Q95,25 150,25 Q205,25 235,50 Q275,55 280,95 Z" fill="url(#body1)" stroke="#000" stroke-width="2"/>
-        <path d="M85,50 Q105,32 150,32 Q195,32 215,50 Z" fill="#0a0a0a" stroke="#333"/>
-        <rect x="20" y="88" width="260" height="10" fill="#050505"/>
-        <circle cx="75" cy="98" r="17" fill="#111" stroke="#555" stroke-width="3"/>
-        <circle cx="225" cy="98" r="17" fill="#111" stroke="#555" stroke-width="3"/>
-        <rect x="30" y="60" width="240" height="6" fill="rgba(255,255,255,.25)" rx="3"/>
-      </svg>`
-    },
-    rav4: {
-      tag: "Compact SUV", name: "2026 Toyota RAV4",
-      desc: "A step up in space without sacrificing agility. Great for small groups, extra luggage, or riders who prefer a higher ride.",
-      pax: "4", bags: "4", base: "$55", best: "City & Suburbs",
-      svg: `<svg viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg">
-        <defs><linearGradient id="body2" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#5a5a5a"/><stop offset="45%" stop-color="#1c1c1c"/><stop offset="100%" stop-color="#000"/>
-        </linearGradient></defs>
-        <ellipse cx="150" cy="122" rx="132" ry="8" fill="#000" opacity=".35"/>
-        <path d="M18,100 Q20,50 65,45 Q90,18 150,18 Q210,18 235,45 Q280,50 282,100 Z" fill="url(#body2)" stroke="#000" stroke-width="2"/>
-        <path d="M80,45 Q102,26 150,26 Q198,26 220,45 Z" fill="#0a0a0a" stroke="#333"/>
-        <rect x="18" y="92" width="264" height="12" fill="#050505"/>
-        <circle cx="78" cy="106" r="19" fill="#111" stroke="#555" stroke-width="3"/>
-        <circle cx="222" cy="106" r="19" fill="#111" stroke="#555" stroke-width="3"/>
-        <rect x="28" y="55" width="244" height="6" fill="rgba(255,255,255,.25)" rx="3"/>
-      </svg>`
-    },
-    highlander: {
-      tag: "Full-Size SUV", name: "2026 Toyota Highlander",
-      desc: "Maximum room for up to 6 passengers with full luggage. The choice for group airport runs and family travel across the city.",
-      pax: "6", bags: "6", base: "$65", best: "Groups & Airports",
-      svg: `<svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
-        <defs><linearGradient id="body3" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#5a5a5a"/><stop offset="45%" stop-color="#1c1c1c"/><stop offset="100%" stop-color="#000"/>
-        </linearGradient></defs>
-        <ellipse cx="150" cy="130" rx="135" ry="9" fill="#000" opacity=".35"/>
-        <path d="M15,108 Q17,45 60,40 Q85,12 150,12 Q215,12 240,40 Q283,45 285,108 Z" fill="url(#body3)" stroke="#000" stroke-width="2"/>
-        <path d="M75,40 Q100,20 150,20 Q200,20 225,40 Z" fill="#0a0a0a" stroke="#333"/>
-        <rect x="15" y="98" width="270" height="14" fill="#050505"/>
-        <circle cx="80" cy="114" r="21" fill="#111" stroke="#555" stroke-width="3"/>
-        <circle cx="220" cy="114" r="21" fill="#111" stroke="#555" stroke-width="3"/>
-        <rect x="25" y="50" width="250" height="6" fill="rgba(255,255,255,.25)" rx="3"/>
-      </svg>`
-    },
-    sienna: {
-      tag: "Minivan", name: "2026 Toyota Sienna",
-      desc: "Maximum passenger and cargo capacity in one vehicle. Perfect for families, larger groups, and airport runs with heavy luggage.",
-      pax: "7", bags: "7", base: "$75", best: "Families & Large Groups",
-      svg: `<svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
-        <defs><linearGradient id="body4" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#5a5a5a"/><stop offset="45%" stop-color="#1c1c1c"/><stop offset="100%" stop-color="#000"/>
-        </linearGradient></defs>
-        <ellipse cx="150" cy="130" rx="138" ry="9" fill="#000" opacity=".35"/>
-        <path d="M14,110 Q16,40 55,36 Q80,14 150,14 Q220,14 245,36 Q284,40 286,110 Z" fill="url(#body4)" stroke="#000" stroke-width="2"/>
-        <path d="M65,36 Q95,22 150,22 Q205,22 235,36 Z" fill="#0a0a0a" stroke="#333"/>
-        <rect x="14" y="100" width="272" height="14" fill="#050505"/>
-        <circle cx="82" cy="116" r="21" fill="#111" stroke="#555" stroke-width="3"/>
-        <circle cx="218" cy="116" r="21" fill="#111" stroke="#555" stroke-width="3"/>
-        <rect x="24" y="48" width="252" height="6" fill="rgba(255,255,255,.25)" rx="3"/>
-      </svg>`
-    }
-  };
-
-  function loadCar(key){
-    const c = fleet[key];
-    document.getElementById('carTag').textContent = c.tag;
-    document.getElementById('carName').textContent = c.name;
-    document.getElementById('carDesc').textContent = c.desc;
-    document.getElementById('carPax').textContent = c.pax;
-    document.getElementById('carBags').textContent = c.bags;
-    document.getElementById('carBase').textContent = c.base;
-    document.getElementById('carBest').textContent = c.best;
-    document.getElementById('carStage').innerHTML = c.svg;
-  }
-  document.querySelectorAll('.fleet-tab').forEach(tab=>{
-    tab.addEventListener('click', ()=>{
-      document.querySelectorAll('.fleet-tab').forEach(t=>t.classList.remove('active'));
-      tab.classList.add('active');
-      loadCar(tab.dataset.car);
-    });
-  });
-  loadCar('camry');
-
-  // ---------- FARE ESTIMATOR ----------
-  document.getElementById('calcBtn').addEventListener('click', ()=>{
-    const base = parseFloat(document.getElementById('estCar').value);
-    const mult = parseFloat(document.getElementById('estTrip').value);
-    const miles = parseFloat(document.getElementById('estMiles').value) || 1;
-    const total = Math.round((base + miles * 2.75) * mult);
-    document.getElementById('estAmt').textContent = '$' + total;
-  });
-
-  // ---------- TESTIMONIAL CAROUSEL ----------
-  let testiIndex = 0;
-  const testiCards = document.querySelectorAll('.testi-card');
-  const dots = document.querySelectorAll('.dot');
-  function showTesti(i){
-    testiCards.forEach(c=>c.classList.remove('active'));
-    dots.forEach(d=>d.classList.remove('active'));
-    testiCards[i].classList.add('active');
-    dots[i].classList.add('active');
-    testiIndex = i;
-  }
-  dots.forEach(d=>d.addEventListener('click', ()=>showTesti(parseInt(d.dataset.i))));
-  setInterval(()=>{ showTesti((testiIndex+1) % testiCards.length); }, 5500);
-
-  function sendMail(e){ return true; }
-</script>
 </body>
 </html>
