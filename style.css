@@ -133,12 +133,12 @@ img,svg{ display:block; }
 
 #sidebar{
   float:left;
-  width:210px;
-  margin-right:20px;
+  width:200px;
+  margin-right:16px;
 }
 #maincol{
   float:left;
-  width:690px;
+  width:680px;
 }
 #maincol.full{ width:100%; float:none; }
 
